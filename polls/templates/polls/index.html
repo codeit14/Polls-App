@@ -1,0 +1,10 @@
+{% if top_5 %}
+	<ul>
+		{% for question in top_5 %}
+		<li><a href = "{% url 'polls:details' question.id %}"> {{ question.ques }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>No polls available</p>
+{% endif %}	
